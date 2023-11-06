@@ -32,6 +32,9 @@ jobs:
       env:
         BASE_PATH: '/${{ github.event.repository.name }}'
       run: npm run build
+    - name: Copy github pages deployment redirect scripts
+    # https://medium.com/@itspaulolimahimself/deploying-a-react-js-spa-app-to-github-pages-58ddaa2897a3
+      run: npm run postdeploy
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:

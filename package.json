@@ -6,7 +6,8 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"postdeploy": "cp ./deployment/404.html ./build/"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",
